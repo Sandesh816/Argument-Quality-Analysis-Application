@@ -41,8 +41,8 @@ The project uses the “IBM Debater® - IBM-ArgQ-Rank-30kArgs” dataset, which 
 **3.Download and place the pre-trained model and tokenizer in the specified directory:**
 Ensure the model and tokenizer files are located in trained_model directory within the project folder.
 
-** 4.Run the Flask application:**
-  flask run
+** 4.Run the Flask script:**
+  python Flask.py
 
 **5.Open the web interface:**
    Navigate to http://127.0.0.1:5000 in your web browser to access the Argument Quality Evaluator.
