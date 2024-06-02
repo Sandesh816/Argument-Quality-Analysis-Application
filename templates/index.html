@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argument Quality Evaluator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Argument Quality Evaluator</h1>
+        <button onclick="showSingleArgumentForm()">Single Argument</button>
+        <button onclick="showMultipleArgumentsForm()">Multiple Arguments</button>
+
+        <form id="single-argument-form" style="display: none;">
+            <textarea id="argument" rows="5" placeholder="Enter or paste your argument here..."></textarea>
+            <button type="button" onclick="submitArgument()">Evaluate</button>
+        </form>
+
+        <form id="multiple-arguments-form" style="display: none;">
+            <textarea id="argument1" rows="5" placeholder="Enter or paste first argument here..."></textarea>
+            <textarea id="argument2" rows="5" placeholder="Enter or paste second argument here..."></textarea>
+            <button type="button" onclick="submitMultipleArguments()">Evaluate and Compare</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        function showSingleArgumentForm() {
+            document.getElementById('single-argument-form').style.display = 'block';
+            document.getElementById('multiple-arguments-form').style.display = 'none';
+        }
+
+        function showMultipleArgumentsForm() {
+            document.getElementById('single-argument-form').style.display = 'none';
+            document.getElementById('multiple-arguments-form').style.display = 'block';
+        }
+
+        async function submitArgument() {
+            const argument = document.getElementById('argument').value;
+            const response = await fetch('/evaluate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ argument })
+            });
+            const data = await response.json();
+            const score = data.score;
+            const feedback = data.feedback;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('result').innerText = `Quality Score: ${score}\nFeedback: ${feedback}`;
+        }
+
+        async function submitMultipleArguments() {
+            const argument1 = document.getElementById('argument1').value;
+            const argument2 = document.getElementById('argument2').value;
+            const response = await fetch('/evaluate-multiple', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ argument1, argument2 })
+            });
+            const data = await response.json();
+            const score1 = data.score1;
+            const feedback1 = data.feedback1;
+            const score2 = data.score2;
+            const feedback2 = data.feedback2;
+            const comparison = data.comparison;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('result').innerText = `First Argument:\nQuality Score: ${score1}\nFeedback: ${feedback1}\n\nSecond Argument:\nQuality Score: ${score2}\nFeedback: ${feedback2}\n\nComparison: ${comparison}`;
+        }
+    </script>
+</body>
+</html>
