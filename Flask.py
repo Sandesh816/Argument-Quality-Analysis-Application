@@ -1,10 +1,16 @@
+'''
+Author: Sandesh Ghimire
+Date: 06/02/2024
+Contact at: sandeshghimire816@gmail.com
+'''
+
 from flask import Flask, request, jsonify, render_template
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 app = Flask(__name__)
 
-model_path = "/Users/sandesh816/Developer/NLP/trained_model"
+model_path = "/trained_model" #Make sure to change the path if you changed the save location of the trained model via Project.ipynb   
 model = AutoModelForSequenceClassification.from_pretrained(model_path)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
