@@ -57,6 +57,8 @@ Single Argument Evaluation
 
 3.Click “Evaluate” to receive a quality score and feedback.
 
+
+
 Multiple Arguments Comparison
 
 1.Click on the “Multiple Arguments” button.
@@ -66,6 +68,8 @@ Multiple Arguments Comparison
 3.Enter the second argument in the second text area.
 
 4.Click “Evaluate and Compare” to receive scores and feedback for both arguments, along with a comparison result.
+
+
 
  Contributing
 
