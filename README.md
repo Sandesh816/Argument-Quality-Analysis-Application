@@ -28,7 +28,7 @@ The Argument Quality Evaluator is a web application that uses Natural Language P
 
 The project uses the “IBM Debater® - IBM-ArgQ-Rank-30kArgs” dataset, which includes high-quality annotated arguments. This dataset is used to fine-tune the pre-trained models to provide accurate and reliable argument quality assessments.
 
-****Installation and Setup****
+**Installation and Setup**
 
 **1.Clone the repository: **
   git clone https://github.com/Sandesh816/Argument-Quality-Analysis-Application.git
@@ -47,10 +47,10 @@ Ensure the model and tokenizer files are located in trained_model directory with
 **5.Open the web interface:**
    Navigate to http://127.0.0.1:5000 in your web browser to access the Argument Quality Evaluator.
 
-****Usage****
+**Usage**
 
-**Single Argument Evaluation
-**
+**Single Argument Evaluation**
+
 1.Click on the “Single Argument” button.
 
 2.Enter your argument in the text area.
@@ -67,10 +67,10 @@ Ensure the model and tokenizer files are located in trained_model directory with
 
 4.Click “Evaluate and Compare” to receive scores and feedback for both arguments, along with a comparison result.
 
-**** Contributing****
+**Contributing**
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
-****License****
+**License**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
