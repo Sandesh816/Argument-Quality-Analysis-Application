@@ -7,15 +7,21 @@ The Argument Quality Evaluator is a web application that uses Natural Language P
 Features
 
 •Single Argument Evaluation: Submit an argument to receive a quality score and detailed feedback on its strengths and areas for improvement.
+
 •Multiple Argument Comparison: Compare two arguments to determine which one is of higher quality, with individual scores and feedback for each argument.
+
 •Interactive Web Interface: A user-friendly interface built with HTML, CSS, and JavaScript, allowing for seamless interaction and quick evaluations.
+
 •Backend Processing: Powered by Flask, the backend handles the processing of arguments using pre-trained models from Hugging Face Transformers library.
 
 Technology Stack
 
 •Frontend: HTML, CSS, JavaScript
+
 •Backend: Flask, Python
+
 •NLP Models: Hugging Face Transformers (BERT for sequence classification)
+
 •Machine Learning: PyTorch
 
 Dataset
@@ -26,7 +32,8 @@ Installation and Setup
 
 1.Clone the repository: 
   git clone https://github.com/Sandesh816/Argument-Quality-Analysis-Application.git
-  cd argument-quality-evaluator
+  
+  cd Argument-Quality-Analysis-Application
 
 2.Install the required dependencies:
  pip install -r requirements.txt
@@ -45,14 +52,19 @@ Usage
 Single Argument Evaluation
 
 1.Click on the “Single Argument” button.
+
 2.Enter your argument in the text area.
+
 3.Click “Evaluate” to receive a quality score and feedback.
 
 Multiple Arguments Comparison
 
 1.Click on the “Multiple Arguments” button.
+
 2.Enter the first argument in the first text area.
+
 3.Enter the second argument in the second text area.
+
 4.Click “Evaluate and Compare” to receive scores and feedback for both arguments, along with a comparison result.
 
  Contributing
