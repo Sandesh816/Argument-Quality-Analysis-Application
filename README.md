@@ -25,7 +25,7 @@ The project uses the “IBM Debater® - IBM-ArgQ-Rank-30kArgs” dataset, which 
 Installation and Setup
 
 1.Clone the repository: 
-  git clone https://github.com/yourusername/argument-quality-evaluator.git
+  git clone https://github.com/Sandesh816/Argument-Quality-Analysis-Application.git
   cd argument-quality-evaluator
 
 2.Install the required dependencies:
