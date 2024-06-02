@@ -10,13 +10,12 @@ Features
 	•	Multiple Argument Comparison: Compare two arguments to determine which one is of higher quality, with individual scores and feedback for each argument.
 	•	Interactive Web Interface: A user-friendly interface built with HTML, CSS, and JavaScript, allowing for seamless interaction and quick evaluations.
 	•	Backend Processing: Powered by Flask, the backend handles the processing of arguments using pre-trained models from Hugging Face Transformers library.
-	•	Text Generation for Feedback: Utilizes text generation pipelines to provide dynamic and contextual feedback based on the argument quality scores.
 
 Technology Stack
 
 	•	Frontend: HTML, CSS, JavaScript
 	•	Backend: Flask, Python
-	•	NLP Models: Hugging Face Transformers (BERT for sequence classification, text generation pipeline)
+	•	NLP Models: Hugging Face Transformers (BERT for sequence classification)
 	•	Machine Learning: PyTorch
 
 Dataset
